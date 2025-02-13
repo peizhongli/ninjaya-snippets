@@ -1,0 +1,102 @@
+{
+  "jsxFunction": {
+    "prefix": "jrf",
+    "body": [
+      "import React, { useState, useEffect, useMemo, useCallback } from 'react';",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = props => {",
+      "\tconst {} = props;",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      ""
+    ],
+    "description": "javascript react function"
+  },
+  "tsxFunction": {
+    "prefix": "trf",
+    "body": [
+      "import React, { FC, useState, useEffect, useMemo, useCallback } from 'react';",
+      "",
+      "interface IProps {",
+      "",
+      "};",
+      "",
+      "interface IStates {",
+      "",
+      "};",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}: FC<IProps> = props => {",
+      "\tconst {} = props;",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      ""
+    ],
+    "description": "typescript react function"
+  },
+  "tsxClass": {
+    "prefix": "trc",
+    "body": [
+      "import React, { FC, useState, useEffect, useMemo, useCallback } from 'react';",
+      "",
+      "interface IProps {",
+      "",
+      "};",
+      "",
+      "interface IStates {",
+      "",
+      "};",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}: FC<IProps> = props => {",
+      "\tconst {} = props;",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+      ""
+    ],
+    "description": "typescript react class"
+  },
+  "useState": {
+    "prefix": "ust",
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/pascalcase}/}] = useState($2)",
+      ""
+    ],
+    "description": "useState snippets"
+  },
+  "useEffect": {
+    "prefix": "-effect",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      // "\treturn () => {$2}",
+      "}, []);",
+      ""
+    ],
+    "description": "useEffect snippets"
+  },
+  "useRef": {
+    "prefix": "-ref",
+    "body": [
+      "const $1 = useRef($2)",
+      ""
+    ],
+    "description": "useEffect snippets"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "flexible layout": {
+    "prefix": "f-c",
+    "scope": "css,less,scss",
+    "body": [
+      "display: flex;",
+      "align-items: ${1|center,flex-start,flex-end,stretch,baseline,initial|};",
+      "justify-content: ${2|center,space-between,flex-end,space-evenly,flex-start,space-around,initial|};"
+    ],
+    "description": "add flexible layout"
+  },
+  "font style": {
+    "prefix": "font",
+    "scope": "css,less,scss",
+    "body": [
+      "font-size: $1px;",
+      "color: #$2;",
+      "font-weight: ${3}00;",
+    ],
+    "description": "add font style"
+  },
+  "before": {
+    "prefix": "-before",
+    "scope": "css,less,scss",
+    "body": [
+      "::before {",
+      "\tcontent: '';",
+      "\t${1}",
+      "}",
+    ],
+    "description": "add font style"
+  },
+  "rpx": {
+    "prefix": "rpx",
+    "scope": "css,less,scss",
+    "body": [
+      "$2 * ${1|@,$|}rpx;",
+    ],
+    "description": "add rpx"
+  },
+  "rpxSetting": {
+    "prefix": "rpxInit",
+    "scope": "css,less,scss",
+    "body": [
+      "${1|@,$|}rpx: 1rem / 16;",
+      "${1|@,$|}rpx414: ${1|@,$|}rpx / (414 / 375);",
+      
+    ],
+    "description": "rpx init"
+  }
+}

@@ -1,0 +1,162 @@
+{
+	"Print to console": {
+		"prefix": "-log",
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"body": [
+			"",
+			"console.log('--------------${1:$TM_SELECTED_TEXT}', ${1:$TM_SELECTED_TEXT});",
+			"",
+		],
+		"description": "Log output to console"
+	},
+	"Add multi-line comments": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-fc",
+		"body": [
+			"/**",
+			" * @name ${1}",
+			" * @desc $2",
+			" * @param ${3|Object,String,Number,Array,Function|}",
+			" * @return ${4|Object,String,Number,Array,Function|}",
+			" */"
+		],
+		"description": "Add multi-line comments"
+	},
+	"Add file header": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-fh",
+		"body": [
+			"/**",
+			" * @name $TM_FILENAME_BASE",
+			" * @desc $1",
+			" * @createTime $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE",
+			" */"
+		],
+		"description": "Add file header"
+	},
+	"define foreach loop": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-foreach",
+		"body": [
+			"const $1 = $2.forEach(${3: i} => {",
+			"\t$0",
+			"});",
+			""
+		],
+		"description": "map loop"
+	},
+	"define map loop": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-map",
+		"body": [
+			"const $1 = $2.map(${3: i} => {",
+			"\t$0",
+			"});",
+			""
+		],
+		"description": "map loop"
+	},
+	"define reduce loop": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-reduce",
+		"body": [
+			"const $1 = $2.reduce((${3: r}, ${4: i}) => {",
+			"\tif($0) {",
+			"\t\t",
+			"\t}",
+			"\treturn ${3: r};",
+			"}, []);",
+			""
+		],
+		"description": "reduce loop"
+	},
+	"define interface": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-interface",
+		"body": [
+			"interface I$1 {",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "define interface"
+	},
+	"define async func": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-async",
+		"body": [
+			"const $1 = async () => {",
+			"\ttry {",
+			"\t\tconst $2 = await $3()",
+			"\t} catch (err) {",
+			"\t\t//",
+			"\t}",
+			"}",
+			""
+		],
+		"description": "define async function"
+	},
+	"define export const": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-exp-c",
+		"body": [
+			"// ",
+			"export const $1 = $2;",
+			"",
+		],
+		"description": "define async function"
+	},
+	"define options": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-opt-array",
+		"body": [
+			"// ",
+			"const $1Options = [",
+			"\t{ value: $2, label: '$3'},",
+			"]",
+			"",
+		],
+		"description": "define array options"
+	},
+	"define map": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-optMap",
+		"body": [
+			"// ",
+			"const $1_MAP = {",
+			"\t[$2]: '$3',",
+			"}",
+			"",
+		],
+		"description": "define array options"
+	},
+	"define post": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-post",
+		"body": [
+			"// $2",
+			"export const $1 = (params) => axios.post(`\\${PREFIX}/`, params)",
+			"",
+		],
+		"description": "define axios post"
+	},
+	"define get": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-get",
+		"body": [
+			"// $2",
+			"export const $1 = (params) => axios.get(`\\${PREFIX}/`, { params })",
+			"",
+		],
+		"description": "define axios get"
+	},
+	"import style module": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-style-module",
+		"body": [
+			"import styles from 'index.module.less';",
+			"",
+		],
+		"description": "import style module"
+	}
+}

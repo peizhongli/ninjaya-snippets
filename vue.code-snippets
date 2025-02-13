@@ -1,0 +1,40 @@
+{
+  "vueSetup": {
+    "prefix": "vsetup",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "\t\t",
+      "\t</div>",
+      "</template>",
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "<style lang=\"scss\" scoped>",
+      "</style>",
+      ""
+    ],
+    "description": "vue3 setup"
+  },
+  "computed": {
+    "prefix": "computed",
+    "body": [
+      "const $1 = computed(() => $2)",
+    ],
+    "description": "vue3 computed"
+  },
+  "ref": {
+    "prefix": "ref",
+    "body": [
+      "const $1 = ref<$2>($3)",
+    ],
+    "description": "vue3 ref"
+  },
+  "props": {
+    "prefix": "props",
+    "body": [
+      "const $props = defineProps<$2>($3)",
+    ],
+    "description": "vue3 props"
+  }
+}
