@@ -14,10 +14,9 @@
 		"prefix": "-fc",
 		"body": [
 			"/**",
-			" * @name ${1}",
-			" * @desc $2",
-			" * @param ${3|Object,String,Number,Array,Function|}",
-			" * @return ${4|Object,String,Number,Array,Function|}",
+			" * ${1}",
+			" * @param ${3}",
+			" * @returns ${4}",
 			" */"
 		],
 		"description": "Add multi-line comments"
@@ -87,7 +86,10 @@
 		"body": [
 			"const $1 = async () => {",
 			"\ttry {",
-			"\t\tconst $2 = await $3()",
+			"\t\tconst {data, code} = await $3()",
+			"\t\tif (code === 200) {",
+			"\t\t\t$2",
+			"\t\t}",
 			"\t} catch (err) {",
 			"\t\t//",
 			"\t}",
@@ -134,8 +136,8 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-post",
 		"body": [
-			"// $2",
-			"export const $1 = (params) => axios.post(`\\${PREFIX}/`, params)",
+			"// $3",
+			"export const $2 = (params) => axios.post(`\\${PREFIX}/$1`, params)",
 			"",
 		],
 		"description": "define axios post"
@@ -144,8 +146,8 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-get",
 		"body": [
-			"// $2",
-			"export const $1 = (params) => axios.get(`\\${PREFIX}/`, { params })",
+			"// $3",
+			"export const $2 = (params) => axios.get(`\\${PREFIX}/$1`, { params })",
 			"",
 		],
 		"description": "define axios get"
@@ -158,5 +160,14 @@
 			"",
 		],
 		"description": "import style module"
-	}
+	},
+	"import api": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-api",
+		"body": [
+			"import { $1 } from '@/modules/main/api/$0';",
+			"",
+		],
+		"description": "import api"
+	},
 }
