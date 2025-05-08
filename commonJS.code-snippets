@@ -15,8 +15,8 @@
 		"body": [
 			"/**",
 			" * ${1}",
-			" * @param ${3}",
-			" * @returns ${4}",
+			" * @param ${2}",
+			" * @returns ${3}",
 			" */"
 		],
 		"description": "Add multi-line comments"
@@ -37,8 +37,8 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-foreach",
 		"body": [
-			"const $1 = $2.forEach(${3: i} => {",
-			"\t$0",
+			"const $2 = $3.forEach(${4: i} => {",
+			"\t$1",
 			"});",
 			""
 		],
@@ -48,8 +48,8 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-map",
 		"body": [
-			"const $1 = $2.map(${3: i} => {",
-			"\t$0",
+			"const $2 = $3.map(${4: i} => {",
+			"\t$1",
 			"});",
 			""
 		],
@@ -59,11 +59,11 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-reduce",
 		"body": [
-			"const $1 = $2.reduce((${3: r}, ${4: i}) => {",
-			"\tif($0) {",
+			"const $2 = $3.reduce((${4: r}, ${5: i}) => {",
+			"\tif($1) {",
 			"\t\t",
 			"\t}",
-			"\treturn ${3: r};",
+			"\treturn ${4: r};",
 			"}, []);",
 			""
 		],
@@ -73,8 +73,8 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-interface",
 		"body": [
-			"interface I$1 {",
-			"\t$0",
+			"interface I$2 {",
+			"\t$1",
 			"}",
 			""
 		],
@@ -86,9 +86,9 @@
 		"body": [
 			"const $1 = async () => {",
 			"\ttry {",
-			"\t\tconst {data, code} = await $3()",
+			"\t\tconst {data, code} = await $2()",
 			"\t\tif (code === 200) {",
-			"\t\t\t$2",
+			"\t\t\t$3",
 			"\t\t}",
 			"\t} catch (err) {",
 			"\t\t//",
@@ -165,9 +165,18 @@
 		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
 		"prefix": "-api",
 		"body": [
-			"import { $1 } from '@/modules/main/api/$0';",
+			"import { $2 } from '@/modules/main/api/$1';",
 			"",
 		],
 		"description": "import api"
+	},
+	"import module": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
+		"prefix": "-module",
+		"body": [
+			"import { $2 } from '@/modules/$1';",
+			"",
+		],
+		"description": "import module"
 	},
 }
