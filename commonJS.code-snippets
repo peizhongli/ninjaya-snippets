@@ -88,10 +88,12 @@
 			"\ttry {",
 			"\t\tconst {data, code} = await $2()",
 			"\t\tif (code === 200) {",
-			"\t\t\t$3",
+			"\t\t\t$4",
 			"\t\t}",
 			"\t} catch (err) {",
 			"\t\t//",
+			"\t} finally {",
+			"\t\t$3",
 			"\t}",
 			"}",
 			""
