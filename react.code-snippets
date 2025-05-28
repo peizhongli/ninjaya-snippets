@@ -99,4 +99,66 @@
     ],
     "description": "useEffect snippets"
   },
+
+  "useMemo": {
+    "prefix": "-memo",
+    "body": [
+      "const $1 = useMemo(() => $2, [$3])",
+      ""
+    ],
+    "description": "useMemo snippets"
+  },
+
+  "useCallback": {
+    "prefix": "-ucall",
+    "body": [
+      "const $1 = useCallback(() => {",
+      "\treturn $2;",
+      "}, [$3])",
+      ""
+    ],
+    "description": "useCallback snippets"
+  },
+
+  "useImperativeHandle": {
+    "prefix": "-ime",
+    "body": [
+      "useImperativeHandle(ref, () => ({",
+      "\t$1: $2,",
+      "}));",
+      ""
+    ],
+    "description": "useImperativeHandle snippets"
+  },
+
+  "useContext": {
+    "prefix": "-uctx",
+    "body": [
+      "const { $1 } = useContext($2);",
+      ""
+    ],
+    "description": "useContext snippets"
+  },
+
+  "exportContext": {
+    "prefix": "-ctx",
+    "body": [
+      "export const $1 = createContext({ $2: $3 });",
+      ""
+    ],
+    "description": "export Context snippets"
+  },
+  
+  "contextProvider": {
+    "prefix": "-ctxp",
+    "body": [
+      "<${1/(.*)/${1:/pascalcase}/}.Provider",
+      "\tvalue={{",
+      "\t\t$2,",
+      "\t}}",
+      ">",
+      ""
+    ],
+    "description": "context Provider snippets"
+  },
 }

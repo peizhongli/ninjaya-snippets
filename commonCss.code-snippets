@@ -47,5 +47,62 @@
       
     ],
     "description": "rpx init"
+  },
+
+  "ellipsis1": {
+    "prefix": "-ellipsis1",
+    "scope": "css,less,scss",
+    "body": [
+      "overflow: hidden;",
+      "text-overflow: ellipsis;",
+      "white-space: nowrap;",
+    ],
+    "description": "ellipsis 1 row"
+  },
+
+  "ellipsis2": {
+    "prefix": "-ellipsis2",
+    "scope": "css,less,scss",
+    "body": [
+      "overflow: hidden;",
+      "white-space: nowrap;",
+      "display: -webkit-box;",
+      "-webkit-box-orient: vertical;",
+      "-webkit-line-clamp: ${1: 2};",
+    ],
+    "description": "ellipsis multiple row"
+  },
+
+  "scrollbar": {
+    "prefix": "-scroll",
+    "scope": "less,scss",
+    "body": [
+        "&::-webkit-scrollbar {",
+        "\twidth: ${1: 6}px;",
+        "\theight: ${1: 6}px;",
+        "",
+        "\t&-thumb {",
+        "\t\tborder-radius: ${2: 3}px;",
+        "\t\tbox-shadow: none;",
+        "}",
+    ],
+    "description": "scrollbar"
+  },
+
+  "scrollbarcss": {
+    "prefix": "-scroll",
+    "scope": "css",
+    "body": [
+        "$1::-webkit-scrollbar {",
+        "\twidth: ${2: 6}px;",
+        "\theight: ${2: 6}px;",
+        "}",
+        "",
+        "$1::-webkit-scrollbar-thumb {",
+        "\tborder-radius: ${3: 3}px;",
+        "\tbox-shadow: none;",
+        "}",
+    ],
+    "description": "scrollbar"
   }
 }
