@@ -161,4 +161,20 @@
     ],
     "description": "context Provider snippets"
   },
+
+  "className": {
+    "prefix": "-cls",
+    "body": [
+      "className={styles.$1}",
+    ],
+    "description": "input className snippets"
+  },
+
+  "classNames": {
+    "prefix": "-clss",
+    "body": [
+      "className={classNames(styles.$1, { [styles.$2]: $3 })}",
+    ],
+    "description": "input classNames snippets"
+  },
 }

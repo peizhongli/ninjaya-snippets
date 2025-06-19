@@ -4,7 +4,7 @@
     "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
     "body": [
       "",
-      "console.log('--------------${1:$TM_SELECTED_TEXT}', ${1:$TM_SELECTED_TEXT});",
+      "console.log('🚀🚀🚀--------------${1:$TM_SELECTED_TEXT}', ${1:$TM_SELECTED_TEXT});",
       ""
     ],
     "description": "Log output to console"
@@ -43,7 +43,7 @@
     "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
     "prefix": "-reduce",
     "body": [
-      "const $1 = $2.reduce((${3: acc}, ${4: cur}) => {",
+      "$2.reduce((${3: acc}, ${4: cur}) => {",
       "\tif($7) {",
       "\t\t$8",
       "\t}",
@@ -182,17 +182,10 @@
     "description": "switch case"
   },
 
-  "classname": {
+  "export value": {
     "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
-    "prefix": "-class",
-    "body": ["className={styles.$1}", ""],
-    "description": "className module"
-  },
-
-  "classnames": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
-    "prefix": "-cls",
-    "body": ["className={classNames($1)}", ""],
-    "description": "classNames"
+    "prefix": "-epv",
+    "body": ["// $1", "export const $1 = '$2';", ""],
+    "description": "export value"
   },
 }
