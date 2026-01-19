@@ -82,7 +82,7 @@
   "define export const": {
     "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
     "prefix": "-exp-c",
-    "body": ["// ", "export const $1 = $2;", ""],
+    "body": ["// $3", "export const $1 = $2;", ""],
     "description": "define async function"
   },
   "define options": {
@@ -107,8 +107,8 @@
     "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
     "prefix": "-post",
     "body": [
-      "// $3",
-      "export const $2 = (params) => axios.post(`\\${PREFIX}/$1`, params)",
+      "// $4",
+      "export const $3 = (params) => axios.post(`\\${SERVER.$1}/$2`, params)",
       ""
     ],
     "description": "define axios post"
@@ -117,8 +117,8 @@
     "scope": "javascript,typescript,typescriptreact,javascriptreact,vue",
     "prefix": "-get",
     "body": [
-      "// $3",
-      "export const $2 = (params) => axios.get(`\\${PREFIX}/$1`, { params })",
+      "// $4",
+      "export const $3 = (params) => axios.get(`\\${SERVER.$1}/$2`, { params })",
       ""
     ],
     "description": "define axios get"
